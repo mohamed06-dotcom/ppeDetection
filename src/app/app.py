@@ -5,7 +5,9 @@ import cv2
 from src.detection import YOLOInference, Postprocess
 from tabs import media, live, alerts, evaluation
 
-RESULTS_PATH = r"C:\Users\moham\PycharmProjects\ppeDetection\src\runs\detect\train\results.csv"
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+RESULTS_PATH = os.path.join(BASE_DIR, "runs")
 
 st.set_page_config(
     page_title="Industrial PPE Monitor",
