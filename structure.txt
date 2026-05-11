@@ -1,0 +1,42 @@
+ppe-detection/
+│
+├── data/
+│   ├── raw/                # original images
+│   ├── processed/          # cleaned / augmented data
+│   └── dataset.yaml        # YOLO dataset config
+│
+├── models/
+│   ├── best.pt             # your trained model
+│   └── last.pt
+│
+├── src/
+│   ├── train.py            # training script
+│   ├── predict.py          # inference on images
+│   ├── evaluate.py         # metrics (mAP, precision, recall)
+│   │
+│   ├── detection/
+│   │   ├── model_loader.py
+│   │   ├── inference.py
+│   │   └── postprocess.py  # PPE logic (helmet, vest checks)
+│   │
+│   ├── app/
+│   │   ├── streamlit_app.py
+│   │   └── utils.py
+│   │
+│   └── webcam/
+│       └── realtime.py
+│
+├── notebooks/
+│   └── experiments.ipynb   # optional (testing ideas)
+│
+├── outputs/
+│   ├── predictions/        # saved images/videos
+│   ├── metrics/            # evaluation results
+│   └── logs/
+│
+├── runs/                   # YOLO auto-generated (training logs)
+│
+├── requirements.txt
+├── README.md
+└── report/
+    └── report.pdf
