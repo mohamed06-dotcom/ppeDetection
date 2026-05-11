@@ -1,3 +1,8 @@
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
+
 import streamlit as st
 import pandas as pd
 import cv2
@@ -5,7 +10,6 @@ import cv2
 from src.detection import YOLOInference, Postprocess
 from tabs import media, live, alerts, evaluation
 
-import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 RESULTS_PATH = os.path.join(BASE_DIR, "runs")
 
